@@ -7,5 +7,5 @@ summary 'Teamspeak3 software deployment'
 description 'Teamspeak3 software deployment'
 project_page 'https://github.com/jbouse/puppet-teamspeak3'
 
-dependency 'puppetlabs/inifile', '>= 1.0.0'
-dependency 'puppetlabs/stdlib', '>= 2.2.0'
+#dependency 'puppetlabs/inifile', '>= 1.0.0'
+#dependency 'puppetlabs/stdlib', '>= 2.2.0'
