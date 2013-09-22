@@ -1,0 +1,11 @@
+name    'puppet-teamspeak3'
+version '0.1.0'
+source 'git://github.com/jbouse/puppet-teamspeak3.git'
+author 'UnderGrid Network Services'
+license 'Apache License, Version 2.0'
+summary 'Teamspeak3 software deployment'
+description 'Teamspeak3 software deployment'
+project_page 'https://github.com/jbouse/puppet-teamspeak3'
+
+dependency 'puppetlabs/inifile', '>= 1.0.0'
+dependency 'puppetlabs/stdlib', '>= 2.2.0'
