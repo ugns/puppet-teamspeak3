@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/UGNS/puppet-teamspeak3.png?branch=master)](https://travis-ci.org/UGNS/puppet-teamspeak3)
+
 ####Table of Contents
 
 1. [Overview](#overview)
