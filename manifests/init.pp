@@ -10,6 +10,10 @@
 # [*basedir*]
 #   Base directory to install Teamspeak under, defaults to /opt
 #
+# [*user*]
+#   (String) User to run Teamspeak server as
+#   Defaults to tspeak3
+#
 # [*default_voice_port*]
 #   (Integer) UDP Port for incoming voice connections
 #   Defaults to 9987
@@ -68,7 +72,7 @@
 #
 # [*whitelist*]
 #   (Array) Whitelisted IP addresses for ServerQuery interface
-#   Defaults to undef
+#   Defaults to 127.0.0.1
 #
 # [*blacklist*]
 #   (Array) Blacklisted IP addresses for ServerQuery interface
@@ -93,6 +97,7 @@
 class teamspeak3 (
   $version            = '3.0.10.3',
   $basedir            = '/opt',
+  $user               = 'tspeak3',
   $default_voice_port = 9987,
   $voice_ip           = '0.0.0.0',
   $filetransfer_port  = 30033,
@@ -107,7 +112,7 @@ class teamspeak3 (
   $dbsqlcreatepath    = $teamspeak3::params::dbsqlcreatepath,
   $licensepath        = undef,
   $inifile            = 'ts3server.ini',
-  $whitelist          = [],
+  $whitelist          = ['127.0.0.1'],
   $blacklist          = [],
   $dbclientkeepdays   = 90,
   $dblogkeepdays      = 90,
