@@ -7,6 +7,10 @@ class teamspeak3::install {
     class { 'staging': }
   }
 
+  Exec {
+    path => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+  }
+
   $release_dir  = "teamspeak3-server_linux-${teamspeak3::params::ts3_arch}"
   $release_file = "${release_dir}-${teamspeak3::version}.tar.gz"
 
