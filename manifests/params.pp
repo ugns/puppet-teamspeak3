@@ -25,19 +25,21 @@ class teamspeak3::params {
     }
   }
 
-  case $teamspeak3::dbtype {
+  $dbtype = 'sqlite'
+
+  case $dbtype {
     'sqlite': {
-      $dbplugin          = "ts3db_${teamspeak3::dbtype}"
-      $dbsqlcreatepath   = "create_${teamspeak3::dbtype}/"
+      $dbplugin          = "ts3db_${dbtype}"
+      $dbsqlcreatepath   = "create_${dbtype}/"
       $dbpluginparameter = undef
     }
     'mysql': {
-      $dbplugin          = "ts3db_${teamspeak3::dbtype}"
-      $dbsqlcreatepath   = "create_${teamspeak3::dbtype}/"
-      $dbpluginparameter = "ts3db_${teamspeak3::dbtype}.ini"
+      $dbplugin          = "ts3db_${dbtype}"
+      $dbsqlcreatepath   = "create_${dbtype}/"
+      $dbpluginparameter = "ts3db_${dbtype}.ini"
     }
     default: {
-      fail("${teamspeak3::dbtype} not supported")
+      fail("${dbtype} plugin not supported")
     }
   }
 

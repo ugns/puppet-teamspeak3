@@ -105,7 +105,7 @@ class teamspeak3 (
   $query_port         = 10011,
   $query_ip           = '0.0.0.0',
   $logpath            = 'logs',
-  $dbtype             = 'sqlite',
+  $dbtype             = $teamspeak3::params::dbtype,
   $dbplugin           = $teamspeak3::params::dbplugin,
   $dbpluginparameter  = $teamspeak3::params::dbpluginparameter,
   $dbsqlpath          = 'sql/',
